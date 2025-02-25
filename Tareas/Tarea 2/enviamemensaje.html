@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Envíame un mensaje</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Envíame un mensaje</h1>
+    </header>
+    <hr>
+
+    <nav class="opciones">
+        <ul class="lista">
+            <li class="item"><a href="yo.html">Sobre mí</a></li>
+            <li class="item"><a href="mifamilia.html">Mi familia</a></li>
+            <li class="item"><a href="miciudad.html">Mi ciudad</a></li>
+            <li class="item"><a href="misamigos.html">Mis amigos</a></li>
+            <li class="item"><a href="mishobbies.html">Hobbies</a></li>
+            <li class="item"><a href="enviamemensaje.html">Envíame un Mensaje</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <form action="formulario_de_contacto">
+                <div>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="10" required></textarea>
+                </div>
+                <div>
+                    <input type="submit" value="Enviar">
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <hr>
+    <footer>
+        <p>&copy; 2025 Mi Sitio Web. Todos los derechos reservados.</p>
+    </footer>
+</body>
+
+</html>

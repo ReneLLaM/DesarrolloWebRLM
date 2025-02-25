@@ -1,0 +1,20 @@
+.naranja{
+    background-color: orange;
+    padding: 10px 20px;
+    margin: 5px;
+    width: 50px;
+    text-align: center;
+}
+
+.morado{
+    background-color: purple;
+}
+
+#contenedor{
+    margin: auto;
+    max-width: 500px;
+    background-color: purple;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
