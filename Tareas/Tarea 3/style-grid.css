@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.container {
+    width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: auto auto auto 1fr auto;
+}
+
+header {
+    background-color: #FABF8F;
+    border: black 1px solid;
+    display: grid;
+    grid-template-columns: 150px 1fr 150px;
+}
+
+header img {
+    width: 150px;
+}
+
+.titulo {
+    display: grid;
+    grid-template-rows: auto auto;
+    justify-items: center;
+    align-content: end;
+}
+
+header .titulo .Universidad {
+    font-size: 13px;
+    color: #C60000;
+    padding-bottom: 10px;
+}
+
+header .titulo .Facultad {
+    font-size: 12px;
+    color: #0070C0;
+    padding-bottom: 10px;
+}
+
+.sub-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 1px solid black;
+}
+
+.sub-header .sistemas {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    background-color: #dbe5f1;
+    padding: 5px 0 10px 0;
+}
+
+.sub-header .computacion {
+    border-right: 1px solid black;
+    background-color: #c2d69b;
+    padding: 5px 0 10px 0;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: 48% 52%;
+    background-color: #404040;
+}
+
+.menu .Semestre {
+    color: #FFC000;
+    font-size: 20px;
+    padding: 12px 8px;
+    text-align: start;
+    font-weight: bold;
+}
+
+.menu .botones {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+}
+
+a {
+    width: 150px;
+    padding: 10px;
+    border: 5px solid #c0504d;
+    background-color: #ffff00;
+    text-decoration: none;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+}
+
+.content .sidebar {
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    display: grid;
+    align-content: start;
+}
+
+.content .sidebar .pregunta {
+    margin-top: 30px;
+}
+
+.content .imagenes {
+    display: grid;
+    grid-template-columns: 390px 1fr;
+    border-right: 1px solid black;
+}
+
+.img-lava {
+    width: 250px;
+}
+
+img.img-bowser {
+    width: 400px;
+    justify-self: center;
+    align-self: center;
+}
+
+.lava {
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    background-color: #d9d9d9;
+    padding: 10px;
+}
+
+footer {
+    display: grid;
+    justify-content: end;
+    border: 1px solid black;
+}
