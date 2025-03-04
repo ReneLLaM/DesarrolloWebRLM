@@ -11,7 +11,17 @@
         td{
             padding: 5px 20px 20px 5px;
             border: 2px solid black;
-            width: 60px;
+            width: 80px;
+            font-family: Arial, sans-serif;
+        }
+        .rojo{
+            background-color: red;
+        }
+        .amarillo{
+            background-color: yellow;
+        }
+        .verde{
+            background-color: green;
         }
     </style>
 </head>
@@ -33,23 +43,23 @@
                 }
                 if($j % 2 == 0){
                     echo "<td";
-                        if($contador == 0){
-                            echo" style = 'background-color: red;'";
-                        }else if($contador == 1){
-                            echo" style = 'background-color: yellow;'";
-                        }else if($contador == 2){
-                            echo" style = 'background-color: green;'";
-                        }
-                        echo ">" . $array[$contador]. "</td>";
+                    if($contador == 0){
+                        echo" class = 'rojo'";
+                    }else if($contador == 1){
+                        echo" class = 'amarillo'";
+                    }else if($contador == 2){
+                        echo" class = 'verde'";
+                    }
+                    echo ">" . $array[$contador]. "</td>";
                 }
                 else{
                     echo "<td";
                     if($contador == 0){
-                        echo" style = 'background-color: red;'";
+                        echo" class = 'rojo'";
                     }else if($contador == 1){
-                        echo" style = 'background-color: yellow;'";
+                        echo" class = 'amarillo'";
                     }else if($contador == 2){
-                        echo" style = 'background-color: green;'";
+                        echo" class = 'verde'";
                     }
                     echo ">" .($contador + 1). "</td>"; //------------------------------------------para sumar
                 }
