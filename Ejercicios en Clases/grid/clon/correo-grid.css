@@ -1,34 +1,27 @@
-/* formatear al inicio */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
-
 nav.container{
     background-color: black;
-    
-    height: 40px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
 }
 
 nav.container ul{
-    display: flex;
-    justify-content: center;
-    height: 40px;
+    display: grid;
+    grid-template-columns: repeat(11,auto);
+    text-align: center;
 }
 
 nav.container ul li{
     height: 40px;
-    align-items: center;
     list-style: none;
-    align-self: center;
-    display: flex;
+    display: grid;
     align-items: stretch;
-    
 }
-
 nav.container ul li a{
     color: white;
     text-decoration: none;
@@ -39,6 +32,11 @@ nav.container ul li a{
     align-content: center;
     text-transform: uppercase;
 }
+
+nav.container ul:nth-child(1){
+    grid-column: 2/3;
+}
+
 
 nav.container ul li a.rojo{
     background-color: red;
@@ -61,9 +59,6 @@ nav.container ul li a.rojo:hover{
     background-color: rgba(255, 0, 0, 0.8);
 }
 
-h2{
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    border: 10px solid black;
-}
+
+
+
