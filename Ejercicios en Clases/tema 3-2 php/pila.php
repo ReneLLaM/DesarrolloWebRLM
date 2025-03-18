@@ -1,0 +1,25 @@
+<?php
+class Pila{
+    private $elementos = array();
+    private $tope = 0;
+
+    public function insertar($elemento){
+        $this->elementos[$this->tope] = $elemento;
+        $this->tope++;
+    }
+
+    public function eliminar(){
+        $elemento = $this->elementos[$this->tope - 1];
+        unset($this->elementos[$this->tope - 1]);
+        $this->tope--;
+        return $elemento;
+    }
+
+    public function mostrar(){
+        for($i = $this->tope - 1; $i >= 0; $i--){
+            echo $this->elementos[$i] . "<br>";
+        }
+    }
+
+}    
+?>
