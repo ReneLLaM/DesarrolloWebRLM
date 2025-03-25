@@ -4,8 +4,8 @@ session_start();
 include("pila.php"); 
 
 
-if(isset($_SESSION['op'])) { 
-    $op = $_SESSION['op'];
+if(isset($_GET['op'])) { 
+    $op = $_GET['op'];
 }
 
 
@@ -17,8 +17,8 @@ if(isset($_SESSION['pila'])) {
 
 switch($op) {
     case "insertar":
-        if(isset($_POST['elemento'])) {
-            $pila->insertar($_POST['elemento']);
+        if(isset($_GET['elemento'])) {
+            $pila->insertar($_GET['elemento']);
         }
         //redireccionar
         header("Location: opciones.php");

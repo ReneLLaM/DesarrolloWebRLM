@@ -9,9 +9,9 @@
     <?php session_start();?>
     <ul>
         <li><a href="insertarfrm.php?op=insertar">Insertar</a></li> 
-        <li><a href="session.php?op=eliminar">Eliminar</a></li>
-        <li><a href="session.php?op=mostrar">Mostrar</a></li>
-        <li><a href="session.php?op=salir">Salir</a></li>
+        <li><a href="operaciones.php?op=eliminar">Eliminar</a></li>
+        <li><a href="operaciones.php?op=mostrar">Mostrar</a></li>
+        <li><a href="operaciones.php?op=salir">Salir</a></li>
     </ul>
 </body>
 </html>

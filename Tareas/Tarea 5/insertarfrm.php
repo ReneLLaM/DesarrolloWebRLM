@@ -11,15 +11,14 @@
     <?php 
     session_start();
     $op = $_GET['op'];
-    $_SESSION['op'] = $op;
-
-
+    
     ?>
 
-    <form action="operaciones.php" method="post">
+    <form action="operaciones.php" method="get">
         <label for="elemento">elemento: </label>
         <input type="text" name="elemento">
         <br>
+        <input type="text" name="op" value="<?php echo $op; ?>" hidden>
         <input type="submit" value="enviar">
 
     </form>
