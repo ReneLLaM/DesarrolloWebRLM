@@ -57,7 +57,7 @@ $resultado=$con->query($sql);
     <?php } ?>
  </table>
 <?php if($_SESSION['nivel']==1){?>
- <a href="forminsertarusuarios.php" class="btn-insertar"> Insertar</a>
+ <a href="forminsertar.php" class="btn-insertar"> Insertar</a>
  <?php } ?>
  
 </body>
