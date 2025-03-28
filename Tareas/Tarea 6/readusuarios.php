@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/tablas.css">
+</head>
+<body>
+<?php session_start();
+
+require("verificarsesion.php");
+include("header.php");
+
+?>
+<a href="cerrar.php" class="btn-cerrar">Cerrar Sesion</a>
+
+<?php
+include("conexion.php");
+$sql="SELECT id,correo,nombre, nivel FROM usuarios";
+
+$resultado=$con->query($sql);
+
+?>
+<table style="border-collapse: collapse" border="1" >
+    <thead>
+        <tr>
+            <th width="100px">Correos</th>
+            <th width="100px">Nombres</th>
+            <th width="100px">Nivel</th>
+            <th>Operaciones</th>
+        </tr>
+    </thead>
+    
+ <?php 
+ while($row=mysqli_fetch_array($resultado)){
+    ?>
+    <tr>
+        <td><?php echo $row['correo'];?></td>
+        <td><?php echo $row['nombre'];?></td>
+        <td><?php echo $row['nivel'];?></td>
+        <?php  if($_SESSION['nivel']==1){?>
+        <td><a href="formeditarusuario.php?id=<?php echo $row['id'];?>">Editar</a>  <a href="deleteusuario.php?id=<?php echo $row['id'];?>">Eliminar</a> </td>
+        <?php } ?>
+    </tr>
+    <?php } ?>
+ </table>
+<?php  if($_SESSION['nivel']==1){?>
+ <a href="forminsertarusuarios.php" class="btn-insertar"> Insertar</a>
+ <?php } ?>
+ 
+</body>
+</html>

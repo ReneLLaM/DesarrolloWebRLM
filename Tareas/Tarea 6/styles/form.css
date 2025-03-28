@@ -1,0 +1,88 @@
+form {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+form input[type="text"],
+form input[type="email"], 
+form input[type="date"],
+form input[type="password"],
+form input[type="number"],
+form select {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus, 
+form input[type="date"]:focus,
+form input[type="password"]:focus,
+form select:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+}
+
+form input[type="text"]:hover,
+form input[type="email"]:hover, 
+form input[type="date"]:hover,
+form input[type="password"]:hover,
+form select:hover {
+    border-color: #4a90e2;
+}
+
+form input[type="radio"] {
+    margin-right: 10px;
+}
+
+form input[type="radio"] + label {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+form input[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #357abd;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+form input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 2px dashed #e0e0e0;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+form input[type="file"]:hover {
+    border-color: #4a90e2;
+}
+

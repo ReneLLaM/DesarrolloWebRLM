@@ -1,0 +1,100 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+table thead {
+    background-color: #4a90e2;
+    color: white;
+}
+
+table thead tr th {
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+    border: 1px solid #3a7bd5;
+}
+
+table tbody tr {
+    transition: background-color 0.3s ease;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f4f4f4;
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+table tbody tr:hover {
+    background-color: #e6f2ff;
+}
+
+table td {
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    vertical-align: middle;
+}
+
+table td img {
+    max-width: 100px;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+table td a {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 0 5px;
+    text-decoration: none;
+    color: white;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+table td a:first-child {
+    background-color: #4a90e2;
+}
+
+table td a:last-child {
+    background-color: #e74c3c;
+}
+
+table td a:hover {
+    opacity: 0.8;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+a.btn-cerrar, a.btn-insertar {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 5px;
+    text-decoration: none;
+    color: white;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+a.btn-cerrar {
+    background-color: #e74c3c;
+}
+
+a.btn-insertar {
+    background-color: #4a90e2;
+}
+
+a.btn:hover {
+    opacity: 0.8;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
