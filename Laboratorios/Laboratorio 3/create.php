@@ -22,7 +22,7 @@ for ($i = 0; $i < $numero; $i++) {
     }
     $stmt->close();
 }
-
+echo "Registros Guardados";
 
 $con->close();
 ?>
