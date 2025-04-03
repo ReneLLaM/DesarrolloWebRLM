@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitroduccion</title>
+
+    <link rel="stylesheet" href="styles/Fintroduccion.css">
+</head>
+
+<body>
+    <div class="container">
+        <form action="Fdatos.php" method="post">
+            <div class="form-row">
+                <label for="numero">Introduzca número alumnos: </label>
+                <div class="select-container">
+                    <select name="numero" id="numero">
+                        <option value="2">2</option>
+                        <option value="4" selected>4</option>
+                        <option value="6">6</option>
+                        <option value="8">8</option>
+                        <option value="10">10</option>
+                    </select>
+                    <div class="flecha"></div>
+                </div>
+            </div>
+            <div class="buttons-row">
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpiar">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
