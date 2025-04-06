@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contenedor-principal{
+    width: 900px;
+    margin: auto;
+    border: 1px solid black;
+    margin-top: 10px;
+}
+
+header{
+    background-color: #b8cce3;
+    height: 200px;
+    display: flex;
+}
+.escudo{
+    width: 250px;
+}
+
+img{
+   width: 110px;
+   margin-left: 130px;
+}
+
+header h1{
+    color: red;
+    text-transform: uppercase;
+    font-size: 22px;
+    padding-top: 25px;
+}
+header h1 span{
+    font-size: 30px;
+}
+
+.facultad{
+    display: flex;
+    align-items: baseline;
+    padding: 10px 0 3px 0;
+}
+
+.facultad h2{
+    color: blue;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+.facultad h2 span{
+    font-size: 25px;
+}
+
+.facultad p{
+    margin-left: 130px;
+}
+
+.facultad span.tamanio{
+    font-size: 18px;
+}
+.facultad p{
+    font-weight: bold;
+}
+.rojo{
+    color:red;
+}
+.amarillo{
+    color: yellow;
+}
+.verde{
+    color: green;
+}
+
+.carrera-semestre{
+    width: 400px;
+    text-align: center;
+}
+
+.carrera-semestre p{
+    font-size: 20px;
+    padding: 4px;
+}
+nav{
+    background-color: #545454;
+    height: 50px;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    padding: 10px;
+
+}
+nav ul li{
+    margin: 5px 10px;
+}
+
+
+nav ul li a{
+    background-color: white;
+    padding: 8px 35px;
+    text-decoration: none;
+    color: black;
+    width: 100%;
+}
+
+nav ul li a:hover{
+    background-color: #d19a60;
+}
+
+
+article{
+    font-size: 20px;
+    padding: 25px 10px;
+    background-color: #e1e1e1;
+}
+
+article ul{
+    padding-left: 50px;
+}
+
+article ul li{
+    padding-left: 25px;
+}

@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contenedor{
+    display: flex;
+}
+
+nav{
+    background-color: #4e5256;
+    width: 250px;
+    height: 100vh;
+}
+
+.avatar{
+    width: 100%;
+    height: 280px;
+    padding: 30px 20px;
+    border-bottom: 2px solid red;
+}
+.avatar img{
+    width: 120px;
+    margin-left: 40px;
+    border: 2px solid white;
+    border-radius: 70px;
+}
+.avatar p{
+    color: white;
+    padding: 5px;
+    font-size: 12px;
+    text-align: center;
+}
+.avatar p.nombre{
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 15px 5px 5px;
+}
+
+.avatar p.repositorio{
+    font-size: 11px;
+    font-weight: bold;
+    padding: 5px 15px;
+}
+
+ul{
+    list-style: none;
+    padding: 10px;
+}
+ul li img{
+    width: 50px;
+    padding: 0 10px;
+}
+ul li{
+    margin: 10px 0;
+    display: flex;
+    align-content: baseline;
+}
+
+ul li a{
+    text-decoration: none;
+    width: 100%;
+    padding: 5px;
+    color: white;
+}
+
+ul li a:hover{
+    background-color: #ec5252;
+    border-radius: 5px;
+}
+.derecha{
+    width: 100%;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    height: 40px;
+    border-bottom: 2px solid #eaeaea;
+    align-content: center;
+}
+
+header img{
+    margin: 5px;
+}
+
+article{
+    padding: 20px;
+}
+
+.tarjetas{
+    display: flex;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.tarjeta{
+    height: 150px;
+    width: 170px;
+    border: 1px solid black;
+}
+
+.tarjeta h3{
+    text-align: center;
+    background-color: white;
+    padding: 10px;
+    border-bottom: 1px solid black;
+    text-transform: uppercase;
+}
+
+.tarjetas img{
+    margin-left: 32px;
+}
+
+.tarjeta h3:hover{
+    background-color: #ec5252;
+    border: 1px solid #ec5252;
+}
+
+.tarjeta:hover{
+    border: 1px solid #ec5252;
+    cursor: pointer;
+}
