@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mayor de 3 números</title>
+</head>
+<body>
+    <script>
+        var num1 = parseInt(prompt("Ingrese el primer número"));
+        var num2 = parseInt(prompt("Ingrese el segundo número"));
+        var num3 = parseInt(prompt("Ingrese el tercer número"));
+        
+        var mayor;
+
+        if(num1 >= num2 && num1 >= num3) {
+            mayor = num1;
+        } else if(num2 >= num1 && num2 >= num3) {
+            mayor = num2;
+        } else {
+            mayor = num3;
+        }
+
+        document.write(`<h2>El número mayor es: ${mayor}</h2>`);
+    </script>
+</body>
+</html>

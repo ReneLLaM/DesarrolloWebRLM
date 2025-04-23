@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        function invertirPalabra(palabra){
+            palabra = palabra.toLowerCase();
+            palabra1Invertida = "";
+            palabra1 = "";
+            for(let i = 0; i < palabra.length; i++){
+                if(palabra[i] != " "){
+                    palabra1 = palabra1 + palabra[i];
+                    palabra1Invertida = palabra[i] + palabra1Invertida;
+                }
+            }
+            // console.log(palabra1);
+            // console.log(palabra1Invertida);
+            
+            alert(palabra1Invertida == palabra1? "Es palindromo": "No es palindromo");
+        }
+        let palabra = prompt("Ingrese la primera palabra");
+
+        invertirPalabra(palabra);
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #resultado {
+            color: red;
+            background-color: yellow;
+            padding: 10px;
+            border: 1px solid black;
+            width: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <label for="a">a:</label>
+    <input type="number" name="a" id="a">
+    <br>
+    <label for="b">b:</label>
+    <input type="number" name="b" id="b">
+    <br>
+    <input type="submit" value="enviar" onclick="calcularMayor()">
+    <p id="resultado" hidden></p>
+
+    <script>
+        function calcularMayor() {
+            var a = parseInt(document.getElementById("a").value);
+            var b = parseInt(document.getElementById("b").value);
+            document.getElementById("resultado").hidden = false;
+            if (a > b) {
+                document.getElementById("resultado").innerHTML = "El número mayor es: " + a;
+            } else {
+                document.getElementById("resultado").innerHTML = "El número mayor es: " + b;
+                
+            }
+        }
+    </script>
+</body>
+</html>

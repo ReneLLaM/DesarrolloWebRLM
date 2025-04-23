@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .contenedor {
+            display: flex;
+            width: 300px;
+            height: auto;
+            margin: auto;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            padding: 40px 20px 20px 20px;
+        }
+        select{
+            border-radius: 0px;
+            background-color: white;
+            border: #ffde32 solid 2px;
+            padding: 10px;
+        }
+
+        #resultado {
+            text-align: center;
+            background-color: #eeeeee;
+            padding: 10px;
+
+        }
+        .calcular{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        input[type="button"] {
+            display: inline;
+            border-radius: 0px;
+            background-color: #fff0a3;
+            border: #ffde32 solid 2px;
+            padding: 10px;
+            margin-top: 20px;
+        
+        }
+
+        #resultado{
+            width: 250px;
+            padding: 10px;
+            height: 15px;
+            background-color: #ffd726;
+        }
+
+        input[type="number"] {
+            border-radius: 0px;
+            background-color: white;
+            border: #ffde32 solid 2px;
+            padding: 10px;
+        }
+
+        label{
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="contenedor">
+        <label for="operacion">Operación</label>
+        <select name="operacion" id="operacion">
+            <option value="+">Suma</option>
+            <option value="-">Resta</option>
+            <option value="*">Multiplicación</option>
+            <option value="/">División</option>
+        </select>
+        <label for="a">A</label>
+        <input type="number" name="a" id="a">
+        <label for="b">B</label>
+        <input type="number" name="b" id="b">
+        <div class="calcular">
+            <input type="button" value="Calcular" onclick="calcular()">
+            <div id="resultado"></div>
+        </div>
+    </div>
+
+    <script>
+        function calcular() {
+            let a = Number(document.getElementById("a").value);
+            let b = Number(document.getElementById("b").value);
+            let operacion = document.getElementById("operacion").value;
+            let resultado = 0;
+            switch (operacion) {
+                case "+":
+                    resultado = a + b;
+                    break;
+                case "-":
+                    resultado = a - b;
+                    break;
+                case "*":
+                    resultado = a * b;
+                    break;
+                case "/":
+                    resultado = a / b;
+                    break;
+            }
+            document.getElementById("resultado").innerHTML = resultado;
+        }
+    </script>
+</body>
+
+</html>

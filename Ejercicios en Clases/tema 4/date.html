@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function saludar(){
+            var tiempo = new Date();
+            var hora = tiempo.getHours();
+            cond = 'son las';
+            if(hora < 12){
+                cond = 'buenos dias';
+            }else if(hora >= 12 && hora <= 18){
+                cond = 'buenas tardes';
+            }else{
+                cond = 'buenas noches';
+            }
+        }
+    </script>
+</body>
+</html>

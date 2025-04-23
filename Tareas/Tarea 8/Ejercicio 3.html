@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Libro{
+            titulo;
+            autor;
+            editorial;
+            anio;
+
+            constructor(titulo, autor, editorial, anio){
+                this.titulo = titulo;
+                this.autor = autor;
+                this.editorial = editorial;
+                this.anio = anio;
+            }
+        
+            mostrar(){
+                document.write(`<h1>Titulo: ${this.titulo}</h1> <h2>Autor: ${this.autor}</h2> <h3>Editorial: ${this.editorial}</h3> <h4>Año: ${this.anio}</h4> `);
+            }
+        }
+
+        
+        let titulo = prompt("Ingrese el titulo");
+        let autor = prompt("Ingrese el autor");
+        let editorial = prompt("Ingrese la editorial");
+        let anio = prompt("Ingrese el anio");
+
+        libro1 = new Libro(titulo, autor, editorial, anio);
+        libro1.mostrar();
+
+
+    </script>
+</body>
+</html>

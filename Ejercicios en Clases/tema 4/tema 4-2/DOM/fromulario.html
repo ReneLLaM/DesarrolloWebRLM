@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="nombre">nombre:</label>
+        <input type="text" name="nombre" id="nombre" >
+        <br>
+        <label for="apellido">apellido:</label>
+        <input type="text" name="apellido" id="apellido" >
+        <br>
+        <label for="sexo">sexo:</label>
+        <input type="radio" name="sexo" id="sexo" value="masculino" >masculino 
+        <input type="radio" name="sexo" id="sexo" value="femenino" >femenino
+        <br>
+        <input type="submit" value="enviar" onclick="mostrar()">
+    </form>
+
+    <script>
+        function mostrar(){
+            var nombre = document.getElementById("nombre").value;
+            var apellido = document.getElementById("apellido").value;
+            var sexo = document.getElementById("sexo").value;
+            if(sexo == "masculino"){
+                alert("bienvenido señor "+apellido+" "+nombre);
+            }else{
+                alert("bienvenida señorita "+apellido+" "+nombre);
+            }
+        }
+    </script>
+</body>
+</html>

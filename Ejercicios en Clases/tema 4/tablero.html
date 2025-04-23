@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palabra en Diagonal</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        td {
+            border: 1px solid black;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var palabra = prompt("introduzca una palabra");
+        const tamanio = palabra.length;
+        
+        // Crear la tabla
+        document.write('<table>');
+        for(let i = 0; i < tamanio; i++) {
+            document.write('<tr>');
+            for(let j = 0; j < tamanio; j++) {
+                if(i === j) {
+                    document.write(`<td>${palabra[i]}</td>`);
+                } else {
+                    document.write('<td></td>');
+                }
+            }
+            document.write('</tr>');
+        }
+        document.write('</table>');
+    </script>
+</body>
+</html>

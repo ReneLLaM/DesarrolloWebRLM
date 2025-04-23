@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //arreglos con indice declarar
+        let a = new Array(5);
+        a[0] = 8;
+        a[1] = 6;
+        a[2] = 3;
+        a[3] = 4;
+        console.log(a);
+        // for(let i = 0; i < a.length; i++){
+        //     document.write(a[i] + "<br>");
+        // }
+        a.forEach(elemento => {
+            document.write(elemento + "<br>");
+        });
+        
+
+        //ordenar el arreglo
+        a.sort();
+        console.log(a);
+    </script>
+</body>
+</html>

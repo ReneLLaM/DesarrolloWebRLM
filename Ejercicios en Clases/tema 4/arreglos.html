@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var dias = ["lunes", "martes", "miercoles", "jueves", "viernes", "sabado", "domingo"];
+        for(var i = 0; i < dias.length; i++){
+            document.write(dias[i] + "<br>");
+        }
+
+        //recorrer el array con foreach
+        dias.forEach(function(dia){
+            document.write(dia + "<br>");
+        });
+
+        //recorrer el array con for of
+        for(var dia of dias){
+            document.write(dia + "<br>");
+        }
+        
+        
+        
+
+    </script>
+</body>
+</html>

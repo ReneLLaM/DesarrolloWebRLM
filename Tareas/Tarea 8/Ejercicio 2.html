@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        numeros = new Array(5);
+        numerosPares = [];
+        for(let i = 0; i < 5; i++){
+            numeros[i] = parseInt(prompt("Ingrese un numero"));
+            if(numeros[i] % 2 == 0){
+                numerosPares.push(numeros[i]);
+            }
+        }
+
+        document.write(`<h1>Catidad de numeros pares: ${numerosPares.length}</h1> `);
+        
+        numerosPares.forEach(element => {
+            document.write(element + "<br>");
+        });
+        
+    </script>
+    
+</body>
+</html>

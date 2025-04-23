@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .contenedor{
+            display: flex;
+            width: 300px;
+            height: auto;
+            margin: auto;
+            flex-direction: column;
+            gap: 10px;
+            padding: 40px 20px 20px 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+        }
+        #resultado{
+            text-align: center;
+            background-color: #eeeeee;
+            padding: 10px;
+            border-radius: 5px;
+               
+        }
+
+        input[type="button"]{
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        
+        }
+        label{
+            font-weight: bold;
+            padding-bottom: 5px;
+        }
+        input[type="number"]{
+            padding: 5px;
+        
+        }
+    </style>
+</head>
+
+<body>
+    <form class="contenedor">
+        <label for="numeroA">Número A</label>
+        <input type="number" name="numeroA" id="numeroA">
+
+        <label for="numeroB">Número B</label>
+        <input type="number" name="numeroB" id="numeroB">
+        <input type="button" value="Comparar" onclick="compararNumeros()">
+        <div id="resultado">
+            Resultado aquí
+        </div>
+    </form>
+
+    <script>
+        function compararNumeros() {
+            const numeroA = parseInt(document.getElementById("numeroA").value);
+            const numeroB = parseInt(document.getElementById("numeroB").value);
+            const resultado = document.getElementById("resultado");
+            if (numeroA > numeroB) {
+                resultado.textContent = `${numeroA} es mayor que ${numeroB}`;
+                resultado.style.backgroundColor = "green";
+                resultado.style.color = "white";
+            } else if (numeroA < numeroB) {
+                resultado.textContent = `${numeroA} es menor que ${numeroB}`;
+                resultado.style.backgroundColor = "blue";
+                resultado.style.color = "white";
+            } else {
+                resultado.textContent = `${numeroA} es igual a ${numeroB}`;
+                resultado.style.backgroundColor = "#e1e1e1"; 
+                resultado.style.color = "black";
+            }
+        }
+    </script>
+</body>
+
+</html>

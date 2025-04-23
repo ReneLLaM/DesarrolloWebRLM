@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numero = parseInt(prompt("Ingrese un numero"));
+
+        let numerosFobonacci = [];
+        for(let i = 0; i < numero; i++){
+            if(i == 0){
+                numerosFobonacci.push(0);
+            }else if(i == 1){
+                numerosFobonacci.push(1);
+            }else{
+                numerosFobonacci.push(numerosFobonacci[i - 1] + numerosFobonacci[i - 2]);
+            }
+        }
+        console.log(numerosFobonacci);
+        for(let i = 0; i < numero ; i++){
+            document.write(`
+            <ul>
+                <li> ${numerosFobonacci[i]} </li>
+            </ul>`)
+        }
+    </script>
+
+    
+</body>
+</html>

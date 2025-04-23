@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        objeto = {
+            marca: "Toyota",
+            modelo: "Corolla",
+            color: "Rojo",
+            precio: 10000,
+            combustible: "Gasolina",
+            cilindrada: 1600,
+            arrancar: function(){
+                return "Arrancando el coche";
+            },
+            detener: function(){
+                return "Deteniendo el coche";
+            },
+            acelerar: function(){
+                return "Acelerando el coche";
+            }
+        }
+        document.write(objeto.marca + " " + objeto.modelo + " " + objeto.color + " " + objeto.precio + " " + objeto.combustible + " " + objeto.cilindrada + " " + objeto.arrancar() + " " + objeto.detener() + " " + objeto.acelerar());
+    </script>
+</body>
+</html>

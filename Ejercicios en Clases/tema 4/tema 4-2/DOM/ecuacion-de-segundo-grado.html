@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solucionador de Ecuaciones Cuadráticas</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+        .calculadora {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        input {
+            width: 60px;
+            text-align: center;
+        }
+        button {
+            margin-left: 10px;
+            padding: 5px 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #resultado {
+            margin-left: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculadora">
+        <input type="number" name="a" id="a" placeholder="a">
+        <p>x^2 +</p>
+        <input type="number" name="b" id="b" placeholder="b">
+        <p>x +</p>
+        <input type="number" name="c" id="c" placeholder="c">
+        <p id="resultado"></p>
+        <button type="button" onclick="resolver()">Resolver</button>
+        
+    </div>
+    
+    <script>
+        function resolver() {
+            let a = parseFloat(document.querySelector("#a").value);
+            let b = parseFloat(document.querySelector("#b").value);
+            let c = parseFloat(document.querySelector("#c").value);
+            
+            // Verificar si los valores son números válidos
+            if (isNaN(a) || isNaN(b) || isNaN(c)) {
+                document.querySelector("#resultado").innerHTML = "Por favor ingresa valores numéricos válidos";
+                return;
+            }
+            
+            // Verificar si a es cero (no sería una ecuación cuadrática)
+            if (a === 0) {
+                document.querySelector("#resultado").innerHTML = "El valor de 'a' no puede ser cero para una ecuación cuadrática";
+                return;
+            }
+            
+            let discriminante = Math.pow(b, 2) - 4 * a * c;
+            
+            if (discriminante > 0) {
+                let x1 = (-b + Math.sqrt(discriminante)) / (2 * a);
+                let x2 = (-b - Math.sqrt(discriminante)) / (2 * a);
+                document.querySelector("#resultado").innerHTML = "x₁ = " + x1.toFixed(2) + " y x₂ = " + x2.toFixed(2);
+            } else if (discriminante === 0) {
+                let x = -b / (2 * a);
+                document.querySelector("#resultado").innerHTML = "x = " + x.toFixed(2) + " (solución única)";
+            } else {
+                // Soluciones complejas
+                let parteReal = (-b / (2 * a)).toFixed(2);
+                let parteImaginaria = (Math.sqrt(-discriminante) / (2 * a)).toFixed(2);
+                document.querySelector("#resultado").innerHTML = 
+                    "x1 = " + parteReal + " + " + parteImaginaria + "i y " +
+                    "x2 = " + parteReal + " - " + parteImaginaria + "i";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var materia = {
+            horarios : [
+                {dia: "lunes", hora: "8:00"},
+                {dia: "martes", hora: "8:00"},
+                {dia: "miercoles", hora: "8:00"},
+                {dia: "jueves", hora: "8:00"},
+                {dia: "viernes", hora: "8:00"},
+                {dia: "sabado", hora: "8:00"},
+                {dia: "domingo", hora: "8:00"},
+            ],
+            nombre: "matematicas",
+            Docente: {nombre:"Juan", apellido:"Perez"},
+            salon: 100,
+            grupo: "A",
+            alumnos:{
+                "alumno1": "Juan",
+                "alumno2": "Pablo",
+                "alumno3": "Maria",
+            },
+            
+        };
+        //convertir objeto en json
+        jsonEstudiantes= JSON.stringify(materia.alumnos);
+            //convertir json en objeto
+        jsonObjeto= JSON.parse(jsonEstudiantes);
+        console.log(jsonEstudiantes);
+        console.log(jsonObjeto);
+
+    </script>
+</body>
+</html>
