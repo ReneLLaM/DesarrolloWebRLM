@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <input type="text" id="elemento">
+    <button id="boton">Añadir a la lista</button>
+    <button id="colorear">colorear</button>
+
+    <ol id="lista">
+
+
+    </ol>
+
+    <script>
+        //añadir el li
+        document.getElementById("boton").addEventListener("click",()=>{
+            let elemento = document.createElement("li");
+            elemento.innerHTML = document.getElementById("elemento").value;
+            document.getElementById("lista").appendChild(elemento);
+        })
+
+        //colorear
+        document.getElementById("colorear").addEventListener("click",()=>{
+            let parrafos = document.getElementsByTagName("li");
+            for(let i = 0; i < parrafos.length; i+=2){
+                parrafos[i].style.backgroundColor = "red";
+            }
+        })
+    </script>
+</body>
+</html>

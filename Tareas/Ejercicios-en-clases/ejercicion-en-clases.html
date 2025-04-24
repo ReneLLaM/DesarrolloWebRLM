@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operaciones</title>
+    <style>
+        .contenedor{
+            width: 600px;
+            margin: auto;
+        }
+        .controles {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            padding: 20px;
+            border-top: 2px solid black;
+            border-left: 2px solid black;
+            border-right: 2px solid black;
+        }
+
+        .operaciones {
+            display: flex;
+            flex-direction: column;
+        }
+        button{
+            padding: 10px 20px;
+            background-color: white;
+            border: 3px solid #156082;
+            cursor: pointer;
+            &:hover{
+                background-color: #156082;
+                color: white;
+            }
+        }
+        input[type="number"]{
+            width: 40px;
+            padding: 5px;
+        }
+
+        #resultado{
+            border: 2px solid #cf7444;
+            height: auto;
+            min-height: 100px;
+            padding: 10px;
+            position: relative;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #a8d8f0;
+        }
+        
+        tr:first-child {
+            background-color: #156082;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contenedor">
+        <div class="controles">
+            <span>Tabla</span>
+            <input type="number" id="numeroTabla" value="5">
+            <div class="operaciones">
+                <div>
+                    <input id="suma" type="radio" name="operacion" value="suma" checked>
+                    <label>Suma</label>
+                </div>
+                <div>
+                    <input id="resta" type="radio" name="operacion" value="resta">
+                    <label>Resta</label>
+                </div>
+            </div>
+            <div class="operaciones">
+                <div>
+                    <input id="multiplicacion" type="radio" name="operacion" value="multiplicacion">
+                    <label>Multiplicación</label>
+                </div>
+                <div>
+                    <input id="division" type="radio" name="operacion" value="division">
+                    <label>División</label>
+                </div>
+            </div>
+            <label>Hasta</label>
+            <input type="number" id="hasta" value="4">
+            <button id="calcular">Calcular</button>
+        </div>
+        <div id="resultado">
+        </div>
+
+        <script>
+            document.getElementById("calcular").addEventListener("click", () => {
+                const numeroTabla = parseInt(document.getElementById("numeroTabla").value);
+                const numeroHasta = parseInt(document.getElementById("hasta").value);
+                
+                let operacion = "";
+                let simbolo = "";
+                
+                if (document.getElementById("suma").checked) {
+                    operacion = "suma";
+                    simbolo = "+";
+                } else if (document.getElementById("resta").checked) {
+                    operacion = "resta";
+                    simbolo = "-";
+                } else if (document.getElementById("multiplicacion").checked) {
+                    operacion = "multiplicacion";
+                    simbolo = "×";
+                } else if (document.getElementById("division").checked) {
+                    operacion = "division";
+                    simbolo = "÷";
+                }
+                
+                let tablaHTML = '<table>';
+                tablaHTML += '<tr><th>Número</th><th>Operación</th><th>Tabla</th><th>=</th><th>Resultado</th></tr>';
+                
+                for (let i = 1; i <= numeroHasta; i++) {
+                    let resultado;
+                    
+                    switch(operacion) {
+                        case "suma":
+                            resultado = i + numeroTabla;
+                            break;
+                        case "resta":
+                            resultado = numeroTabla - i;
+                            break;
+                        case "multiplicacion":
+                            resultado = i * numeroTabla;
+                            break;
+                        case "division":
+                            resultado = (numeroTabla / i).toFixed(2);
+                            if (resultado.endsWith(".00")) {
+                                resultado = parseInt(resultado);
+                            }
+                            break;
+                    }
+                    
+                    tablaHTML += `<tr>
+                        <td>${i}</td>
+                        <td>${simbolo}</td>
+                        <td>${numeroTabla}</td>
+                        <td>=</td>
+                        <td>${resultado}</td>
+                    </tr>`;
+                }
+                
+                tablaHTML += '</table>';
+                
+                document.getElementById("resultado").innerHTML = tablaHTML;
+            });
+            
+            document.addEventListener("DOMContentLoaded", () => {
+                document.getElementById("numeroTabla").value = "5";
+                document.getElementById("hasta").value = "4";
+                document.getElementById("suma").checked = true;
+            });
+        </script>
+    </div>
+</body>
+</html>

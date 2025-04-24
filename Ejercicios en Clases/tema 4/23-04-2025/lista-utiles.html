@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="elemento">
+    <button id="boton">Añadir a la lista</button>
+
+    <ul id="lista">
+
+
+    </ul>
+
+    <script>
+        //añadir el li
+        document.getElementById("boton").addEventListener("click",()=>{
+            let elemento = ` <li>${document.getElementById("elemento").value}</li>`;
+            document.getElementById("lista").innerHTML += elemento;
+
+
+        })
+    </script>
+</body>
+</html>
