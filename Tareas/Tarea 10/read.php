@@ -1,4 +1,13 @@
-<?php include("conexion.php");
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read</title>
+    <link rel="stylesheet" href="styles/tablas.css">
+</head>
+<body>
+    <?php include("conexion.php");
 
 $sql="SELECT id,nombres,apellidos,fecha_nacimiento,sexo,correo FROM personas";
 
@@ -33,3 +42,5 @@ $resultado=$con->query($sql);
 
  <a href="javascript:cargarContenido('forminsertar.html')"> Insertar</a>
  
+</body>
+</html>

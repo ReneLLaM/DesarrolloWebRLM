@@ -4,8 +4,15 @@
     box-sizing: border-box;
 }
 
+nav {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
 #content {
-    width: 80%;
+    width: 100%;
     margin: auto;
     background-color: #f0f0f0;
     display: flex;
@@ -13,23 +20,27 @@
 }
 #menu {
     width: 20%;
+    height: 100vh;
     background-color: #333;
     color: white;
-    padding: 20px;
 }
 #menu ul {
     list-style: none;
     padding: 0;
 }
-#menu ul li {
-    margin: 10px 0;
-}
+
 #menu ul li a {
+    display: block;
     color: white;
     text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    padding:10px;
 }
 #menu ul li a:hover {
-    background-color: yellow;
+    background-color: #4a90e2;
+    padding: 10px;
+    border-radius: 5px;
 }
 #contenido {
     width: 80%;
