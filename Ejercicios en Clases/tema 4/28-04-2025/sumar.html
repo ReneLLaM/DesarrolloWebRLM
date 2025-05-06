@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.js" type="text/javascript"></script>
+</head>
+<body>
+    a: <input type="number" id="a">
+    b: <input type="number" id="b">
+    <button onclick="sumar()">Sumar</button>
+    <div id="resultado"></div>
+
+    <!-- //usando jquery -->
+    <script>
+        // usando    anonima flecha
+        $document.ready(() => {
+            $("#a").on("change", sumar);
+            $("#b").on("change", sumar);
+        });
+        
+    </script>
+    
+</body>
+</html>

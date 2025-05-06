@@ -1,0 +1,18 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+#content{
+    width: 80%;
+    margin: auto;
+    background-color: antiquewhite;
+    display: flex;
+}
+
+#menu{
+    width: 20%;
+    background-color: #d31c1c;
+    color: white;
+}
