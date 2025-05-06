@@ -31,5 +31,5 @@ $resultado=$con->query($sql);
     <?php } ?>
  </table>
 
- <a href="forminsertar.html"> Insertar</a>
+ <a href="javascript:cargarContenido('forminsertar.html')"> Insertar</a>
  
