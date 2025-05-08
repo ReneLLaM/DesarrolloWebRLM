@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ubicación Geográfica</title>
+    <script src="script.js" defer></script>
+</head>
+<body onload="obtenerDepartamentos()">
+    <div class="form-container">
+        <h1>Ubicación Geográfica</h1>
+
+        <label for="departamento">Departamento</label>
+        <select name="departamento" id="departamento" onchange="obtenerProvincias()"></select> 
+        <br>
+        <label for="provincia">Provincia</label>
+        <select name="provincia" id="provincia" onchange="obtenerMunicipios()"></select> 
+        <br>
+        <label for="municipio">Municipio</label>
+        <select name="municipio" id="municipio"></select>
+    </div>
+</body>
+</html>
