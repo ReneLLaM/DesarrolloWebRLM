@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/examen2Parcial-1.css">
+    <link rel="stylesheet" href="styles/formulario.css">
+    <script src="ajax.js"></script>
+    <script src="fetch.js"></script>
+</head>
+
+<body onload="javascript:cargarContenido('botones.html');">
+    <div class="contenedor-prinsipal">
+        <div class="contenedor">
+            <nav id="men" class="men">
+
+            </nav>
+            <main class="princip" id="princip">
+
+            </main>
+        </div>
+        <footer>
+            <div class="btnMenu" id="btnMenu">
+                <a href="javascript:cargarContenido('botones.html')">Menu</a>
+            </div>
+            <div class="mensaj" id="mensaj">
+
+            </div>
+
+        </footer>
+    </div>
+
+    <script>
+        function openModal(imgSrc) {
+            document.getElementById('imageModal').style.display = 'block';
+            document.getElementById('modalImage').src = imgSrc;
+        }
+
+        function closeModal() {
+            document.getElementById('imageModal').style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            if (event.target == document.getElementById('imageModal')) {
+                closeModal();
+            }
+        }
+    </script>
+
+    
+</body>
+
+</html>
