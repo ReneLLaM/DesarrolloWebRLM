@@ -199,7 +199,9 @@ function renderizarTablaRead(objeto) {
 
   for (var i = 0; i < lista.length; i++) {
     html += `<tr>
-      <td><img src="images/${lista[i].fotografia}" class="img-fluid" style="max-width: 50px"></td>
+      <td class="text-center align-middle">
+        <img src="images/${lista[i].fotografia}" class="img-thumbnail rounded" style="width: 60px; height: 60px; object-fit: cover;">
+      </td>
       <td>${lista[i].nombres}</td>
       <td>${lista[i].apellidos}</td>
       <td>${lista[i].fecha_nacimiento}</td>
