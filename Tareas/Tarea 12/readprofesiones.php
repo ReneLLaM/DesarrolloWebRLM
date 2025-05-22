@@ -1,40 +1,36 @@
 <?php session_start();
 
 require("verificarsesion.php");
-require("verificarnivel.php");
 
 ?>
 <a href="cerrar.php">Cerrar Sesion</a>
 
 <?php
 include("conexion.php");
-$sql="SELECT * FROM profesiones";
+$sql="SELECT id,nombre FROM profesiones";
 
 $resultado=$con->query($sql);
 
 ?>
-<table border="1">
+<table style="border-collapse: collapse" border="1" >
+    <thead>
+        <tr>
+            <th width="100px">Nombres</th>
+        </tr>
+    </thead>
+    
+ <?php 
+ while($row=mysqli_fetch_array($resultado)){
+    ?>
     <tr>
-        <th>Nombre</th>
-        <?php if($_SESSION['nivel']==1){ ?>
-        <th>Operaciones</th>
+        <td><?php echo $row['nombre'];?></td>
+        <?php  if($_SESSION['nivel']==1){?>
+        <td><a href="javascript:editarProfesion(<?php echo $row['id'];?>)">Editar</a>  <a href="javascript:eliminarProfesion(<?php echo $row['id'];?>)">Eliminar</a> </td>
         <?php } ?>
     </tr>
-    <?php
-    while($row = $resultado->fetch_assoc()) {
-        echo "<tr>";
-        echo "<td>" . $row['nombre'] . "</td>";
-        if($_SESSION['nivel']==1){
-            echo "<td>";
-            echo "<a href='javascript:editarProfesion(" . $row['id'] . ")'>Editar</a> ";
-            echo "<a href='javascript:eliminarProfesion(" . $row['id'] . ")'>Eliminar</a>";
-            echo "</td>";
-        }
-        echo "</tr>";
-    }
-    ?>
-</table>
+    <?php } ?>
+ </table>
 <?php  if($_SESSION['nivel']==1){?>
- <a href="javascript:formInsertarProfesion()">Insertar</a>
+ <a href="javascript:formInsertarProfesion()"> Insertar</a>
  <?php } ?>
  

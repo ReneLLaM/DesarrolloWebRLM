@@ -3,20 +3,17 @@ include("conexion.php");
 require("verificarsesion.php");
 require("verificarnivel.php");
 
-$nombre=$_POST['nombre'];
+$id=$_GET['id'];
+//$sql="DELETE FROM personas WHERE id=$id";
 
-$stmt=$con->prepare('INSERT INTO profesiones(nombre) VALUES(?)');
-
-// Vincular parámetros
-$stmt->bind_param("s",$nombre);
-
+$stmt=$con->prepare('DELETE FROM personas WHERE id=?');
+$stmt->bind_param("i",$id);
 // Ejecutar la consulta
 if ($stmt->execute()) {
-    echo "Nuevo registro creado con éxito";
+    echo "Registro Eliminado";
 } else {
     echo "Error: " . $stmt->error;
 }
 
 $con->close();
 ?>
-
