@@ -1,5 +1,5 @@
 <?php
-$con = new mysqli("localhost", "root", "", "bd_correo");
-if ($con->connect_error) {
-    die("Error: " . $con->connect_error);
+$con = mysqli_connect("localhost", "root", "", "bd_correo");
+if (mysqli_connect_errno()) {
+    die("Se produjo un error " . mysqli_connect_error());
 }
