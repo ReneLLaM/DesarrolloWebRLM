@@ -43,12 +43,14 @@ verCorreoBandejaSalida = function (id) {
   fetch("ver-correo-bandeja-salida.php?id=" + id)
     .then((response) => response.text())
     .then((data) => {
+      
       const objeto = JSON.parse(data);
+      console.log(objeto);
       const titulo = objeto[0].asunto;
       const contenido = objeto[0].mensaje;
       const fecha = objeto[0].fecha;
       const receptor = objeto[0].receptor;
-      const nombre = objeto[0].nombre_receptor;
+      const nombre = objeto[0].nombre;
       
       modal.style.display = "block";
       modal.style.zIndex = 30;
@@ -660,6 +662,13 @@ function guardarEditarCuenta() {
 }
 
 function listarRevisarCorreos() {
+  let contenedor = document.getElementById("contenido");
+  let titulo = document.getElementById("nav-revisar-correos");
+  resetNavStyles();
+  titulo.style.borderRight = "3px solid #6974dc";
+  titulo.style.backgroundColor = "#f0f3fd";
+  titulo.style.color = "#6974dc";
+
   fetch("listar-revisar-correos.php")
     .then(response => response.text())
     .then(data => {

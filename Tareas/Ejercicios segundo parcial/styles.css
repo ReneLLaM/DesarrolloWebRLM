@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contenedor-principal{
+    width: 1000px;
+    height: 80vh;
+    margin: auto;
+    margin-top: 30px;
+    border: 1px solid black;
+}
+
+.superior{
+    height: 90%;
+    width: 100%;
+    display: flex;
+}
+
+footer{
+    height: 10%;
+    width: 100%;
+    background-color: #4472c4;
+}
+
+
+nav{
+    height: 100%;
+    width: 20%;
+    border: 2px solid green;
+}
+
+#contenido{
+    height: 100%;
+    width: 80%;
+    border: 2px solid green;
+}
+
+
+nav ul{
+    list-style: none;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-end;
+}
+
+nav ul li a{
+    display: block;
+    padding: 30px;
+    border: 1px solid black;
+    text-decoration: none;
+    color: black;
+
+    &:hover{
+        background-color: #4472c4;
+        color: white;
+    }
+}
+
+
+
+/* tres en raya */
+.grilla{
+    width: 80%;
+    height: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr ;
+    gap: 50px;
+    margin: auto;
+    margin-top: 40px;
+    
+}
+
+.item{
+    border: 2px solid black;
+    text-align: center;
+    font-size: 60px;
+    cursor: pointer;
+}
+
+
+#mensaje{
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+}
+
+.ejercicio2{
+    display: flex;
+    justify-content: space-around;
+    border: 2px solid black;
+    padding: 10px;
+}
+
+.centros{
+    display: flex;
+    gap: 10px;
+}
+
+
+#contenido{
+    overflow-y: scroll;
+}
+
+img{
+    display: block;
+}
+
+
+
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  

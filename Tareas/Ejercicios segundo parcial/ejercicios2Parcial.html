@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="contenedor-principal">
+        <div class="superior">
+            <nav>
+                <ul>
+                    <li><a href="javascript:cargarContenido('tresenraya.html')">1</a></li>
+                    <li><a href="javascript:pregunta2('tabla.html')">2</a></li>
+                    <li><a href="javascript:pregunta3('listar.php')">3</a></li>
+                    <li><a href="javascript:pregunta4('listar.php','4')">4</a></li>
+                    <li><a href="javascript:pregunta5()">5</a></li>
+                </ul>
+            </nav>
+            <div id="contenido">
+                <!-- grilla -->
+                
+
+
+            </div>
+        </div>
+
+
+        <footer id="mensaje">
+            <button onclick="abrirModal()" id="mostrarModal">Mostrar Modal</button>
+        </footer>
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2 id="titulo-modal">Título del Modal</h2>
+                <div id="contenido-modal">
+    
+                </div>
+            </div>
+        </div>
+
+
+        <script src="scrips.js"></script>
+    </div>
+</body>
+
+</html>
