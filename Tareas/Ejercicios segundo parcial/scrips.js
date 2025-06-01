@@ -157,22 +157,18 @@ function renderizarSeccion(objeto) {
 function mostrarImagen(objeto) {
     console.log(objeto);
 
-    // Limpiar el contenedor si ya hay algo
     const contenedor = document.getElementById("contenido");
     
-    // Eliminar imagen anterior si existe
     const imagenAnterior = contenedor.querySelector('img');
     if (imagenAnterior) {
         imagenAnterior.remove();
     }
 
-    // Crear la imagen
     const imagen = document.createElement('img');
     imagen.src = `images/${objeto.imagen}`;
     imagen.style.maxWidth = '300px';
     imagen.style.marginTop = '10px';
 
-    // Insertar la imagen en el contenedor
     contenedor.appendChild(imagen);
 }
 
@@ -199,12 +195,3 @@ window.onclick = function (event) {
 };
 
 
-function abrirModal(){
-    fetch("tresenraya.html")
-    .then(response => response.text())
-    .then(data => {
-        document.getElementById("titulo-modal").textContent = "titulo modificado";
-        document.getElementById("contenido-modal").innerHTML = data;
-        modal.style.display = "block";
-    })
-}

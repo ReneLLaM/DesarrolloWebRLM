@@ -14,7 +14,7 @@ if(!isset($_GET['boton'])){ // si existe el boton
 
 
     ?>
-    <a href="cerrar.php">Cerrar Sesion</a>
+    <a href="cerrar.php" class="cerrar-sesion">Cerrar Sesion</a>
     <table>
         <thead>
             <tr>
@@ -31,7 +31,7 @@ if(!isset($_GET['boton'])){ // si existe el boton
                 <td><?php echo $row["correo"]?></td>
                 <td><?php echo $row["nombrecompleto"]?></td>
                 <td><?php echo $row["nivel"] == 0 ? "Administrador" : "Usuario"?></td>
-                <?php if($_SESSION["nivel"] == 0) echo "<td>".( $row["nivel"] == 0 ? "<a href='javascript:cambiarNivel(".$row['id'].",".$row['nivel'].")'>Cambiar a usuario</a>" : "<a href='javascript:cambiarNivel(".$row['id'].",".$row['nivel'].")'>Cambiar a administrador</a>" )."</td>"?>
+                <?php if($_SESSION["nivel"] == 0) echo "<td>".( $row["nivel"] == 0 ? "<a class='btn-level admin-to-user' href='javascript:cambiarNivel(".$row['id'].",".$row['nivel'].")'>Cambiar a usuario</a>" : "<a class='btn-level user-to-admin' href='javascript:cambiarNivel(".$row['id'].",".$row['nivel'].")'>Cambiar a administrador</a>" )."</td>"?>
             </tr>
         <?php } ?>
         </tbody>
@@ -74,7 +74,7 @@ $sql = "SELECT l.id, l.imagen as fotografia, l.titulo, l.autor,l.anio, e.editori
 
 ?>
 
-
+<a href="cerrar.php" class="cerrar-sesion">Cerrar Sesion</a>
 <table style="border-collapse: collapse" border="1" >
     <thead>
         <tr>
