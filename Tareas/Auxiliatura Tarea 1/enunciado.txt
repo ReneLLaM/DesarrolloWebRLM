@@ -1,0 +1,7 @@
+Agregar los botones y las funciones de 
+- Potencia
+- Raíz de x
+- Logaritmo (base 10) (Solo recibe un termino) 
+- Factorial (Solo recibe un termino)
+
+Hasta el viernes 12/06

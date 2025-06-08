@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="searchbar">
+      <p>Puede buscar por titulo, autor, año o editorial</p>
+      <input type="text" name="prompt" id="searchbar" onchange="search()"/>
+      <button onclick="search()">Buscar</button>
+      <br>
+      
+      <div class="results">
+        
+      </div>
+    </div>
+
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+          <span class="close x">&times;</span>
+          <h2 id="titulo-modal">Título del Modal</h2>
+          <div id="contenido-modal">
+          </div>
+          
+      </div>
+  </div>
+  </body>
+  <script src="script.js"></script>
+</html>

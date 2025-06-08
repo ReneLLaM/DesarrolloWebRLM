@@ -1,0 +1,6 @@
+1. Modificar el archivo search.php para que realice la búsqueda de libros 
+en la base de datos bd_biblioteca
+2. Agregar una función para que al hacer click en los resultados recupere 
+y muestre los datos del libro seleccionado modal o en un alert
+
+Hasta el viernes 12/06

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .calculadora {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 300px;
+        margin: 0 auto;
+        border: 1px solid black;
+        align-items: center;
+        padding: 10px;
+      }
+
+      .calculadora .pantalla {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        gap: 10px;
+        padding: 10px;
+        border: 1px solid black;
+      }
+
+      .calculadora .pantalla .superior {
+        width: 100%;
+        min-height: 10px;
+        text-align: right;
+        font-size: 15px;
+      }
+
+      .calculadora .pantalla .inferior {
+        min-height: 20px;
+        width: 100%;
+        text-align: right;
+        font-size: 20px;
+      }
+
+      .calculadora .teclado {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        width: 90%;
+      }
+
+      .calculadora .teclado button {
+        padding: 10px;
+        font-size: 20px;
+        border: 1px solid black;
+        background-color: white;
+        cursor: pointer;
+      }
+
+      .calculadora .teclado button:hover {
+        background-color: lightgray;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="calculadora">
+      <div class="pantalla">
+        <div class="superior"></div>
+        <div class="inferior"></div>
+      </div>
+      <div class="teclado">
+        <button class="operacion">^</button>
+        <button class="operacion">raiz</button>
+        <button class="operacion">log</button>
+        <button class="operacion">!</button>
+        <button class="numero">7</button>
+        <button class="numero">8</button>
+        <button class="numero">9</button>
+        <button class="operacion">/</button>
+        <button class="numero">4</button>
+        <button class="numero">5</button>
+        <button class="numero">6</button>
+        <button class="operacion">*</button>
+        <button class="numero">1</button>
+        <button class="numero">2</button>
+        <button class="numero">3</button>
+        <button class="operacion">-</button>
+        <button class="numero">0</button>
+        <button class="numero">.</button>
+        <button id="igual">=</button>
+        <button class="operacion">+</button>
+        <button style="grid-column: span 2" id="all-clear">AC</button>
+        <button style="grid-column: span 2" id="delete">DEL</button>
+      </div>
+    </div>
+  </body>
+  <script src="ejercicio5.js"></script>
+</html>

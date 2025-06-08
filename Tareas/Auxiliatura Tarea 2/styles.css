@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+  gap: 5px;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.container {
+  width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+
+  & .content {
+    display: flex;
+    border: 1px solid green;
+
+    & #contenido {
+      padding: 10px;
+      width: 90%;
+      border-right: 1px solid green;
+      min-height: 200px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: start;
+
+      & form {
+        display: flex;
+        gap: 10px;
+        padding: 10px;
+        border: 1px solid black;
+        align-items: center;
+      }
+
+      & .calendar {
+        width: 80%;
+        display: flex;
+        border: 1px solid black;
+
+        & .options {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          padding: 10px;
+          border-right: 1px solid black;
+          width: fit-content;
+          align-items: start;
+        }
+
+        & #result {
+          min-height: 180px;
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+
+      & .searchbar {
+        position: relative;
+
+        & .results {
+          position: absolute;
+          display: none;
+          top: 110%;
+          left: 0;
+          width: 100%;
+          background-color: white;
+          border: 1px solid black;
+
+          & .result {
+            padding: 5px;
+            cursor: pointer;
+            border-bottom: 1px solid black;
+
+            &:hover {
+              background-color: lightgray;
+            }
+          }
+
+          & .result:last-child {
+            border-bottom: none;
+          }
+        }
+      }
+    }
+
+    & .options {
+      width: 10%;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      gap: 10px;
+
+      & .option {
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        border: 1px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+
+  & #mensaje {
+    width: 100%;
+    padding: 10px;
+    background-color: cadetblue;
+    border: 1px solid blue;
+    text-align: center;
+    min-height: 40px;
+  }
+}
+
+
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  text-align: center;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.btnimg {
+    align-items: center;
+
+}
