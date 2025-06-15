@@ -1,0 +1,575 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root{
+    --color-principal: #087ec4;
+    --color-secundario: #ef4444;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #f0f3fd;
+    border-bottom: 1px solid #ccc;
+}
+.header a{
+    text-decoration: none;
+}
+
+
+.header .logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    font-size: 25px;
+    color: var(--color-principal);
+}
+.header img{
+    width: 40px;
+}
+
+.user-menu{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    align-self: center;
+}
+
+.user-menu img{
+    width: 20px;
+}
+
+.user-info{
+    display: flex;
+    align-items: center;
+}
+
+.reservas-user{
+    cursor: pointer;
+    padding: 5px 15px;
+    border-radius: 10px;
+    border: 2px solid var(--color-principal);
+    color: var(--color-principal);
+    font-weight: bold;
+    margin-right: 10px;
+    &:hover{
+        background-color: var(--color-principal);
+        color: #fff;
+    }
+}
+.user-info img:hover{
+    cursor: pointer;
+}
+.user-info .nombre-usuario:hover{
+    cursor: pointer;
+    color: var(--color-principal);
+}
+
+.user-menu a{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: var(--color-principal);
+    font-weight: bold;
+    text-decoration: none;
+    padding: 5px 20px;
+    border-radius: 10px;
+    border: 2px solid var(--color-principal);
+}
+
+.user-menu a:hover{
+    background-color: var(--color-principal);
+    color: #fff;
+}
+
+.user-info .nombre-usuario{
+    font-weight: bold;
+    font-size: 16px;
+    padding: 2px 10px;
+}
+
+.user-menu a{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: var(--color-principal);
+    font-weight: bold;
+    text-decoration: none;
+    padding: 5px 20px;
+    border-radius: 10px;
+    border: 2px solid var(--color-principal);
+}
+
+#tipo-usuario{
+    font-weight: bold;
+    font-size: 16px;
+    padding: 2px 10px;
+    color: #ef4444;
+    padding: 2px 15px;
+    border-radius: 15px;
+}
+
+.container{
+    display: flex;
+}
+
+
+.menu{
+    background-color: #f0f3fd;
+    display: block;
+    width: 250px;
+    height: calc(100vh - 81px);
+    padding-top: 30px;
+    border-right: 1px solid #ccc;
+}
+.menu img{
+    width: 20px;
+}
+
+.menu ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+.menu ul li a{
+    text-decoration: none;
+    color: var(--color-principal);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 40px;
+}
+
+.menu ul li a:hover,
+.menu ul li a.active {
+    background-color: var(--color-principal);
+    color: #fff;
+}
+
+/* Style for active logo */
+.logo.active {
+    opacity: 0.8;
+    transform: scale(0.98);
+    transition: all 0.2s ease;
+}
+
+#contenido{
+    width: calc(100% - 250px);
+    height: calc(100vh - 81px);
+    overflow: scroll;
+}
+
+
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    overflow: auto;
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px 24px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+
+  #grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 24px;
+    padding: 32px;
+}
+
+.habitacion {
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    color: #333;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.habitacion:hover {
+    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.2);
+    transform: translateY(-4px);
+    border: 1px solid #007bff;
+}
+
+.habitacion img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    filter: brightness(0.95);
+}
+
+.habitacion .nombre {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background-color: #f0f4f8;
+    border-bottom: 1px solid #e0e7ee;
+}
+
+.habitacion .nombre h3 {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #222;
+    margin: 0;
+}
+
+.habitacion .nombre p {
+    font-size: 0.95em;
+    color: #007bff;
+    margin: 0;
+    font-weight: 500;
+}
+
+.habitacion .datos {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 16px 0 16px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.habitacion > p {
+    padding: 10px 16px 16px 16px;
+    margin: 0;
+    color: #444;
+    font-weight: 500;
+    font-size: 0.95em;
+    border-top: 1px solid #eaecef;
+}
+
+.habitacion p sup {
+    font-size: 12px;
+    vertical-align: top;
+}
+#capacidad{
+    font-weight: bold;
+}
+
+#superficie {
+    font-weight: bold;
+}
+
+@media (max-width: 1024px) {
+    .menu {
+        width: 200px;
+    }
+
+    #contenido {
+        width: calc(100% - 200px);
+    }
+
+    .header {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .user-menu {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 10px;
+    }
+    
+    .user-menu a {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .menu {
+        width: 100%;
+        height: auto;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .menu ul {
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .menu ul li a {
+        padding: 15px;
+    }
+
+    #contenido {
+        width: 100%;
+        height: auto;
+    }
+
+    #grid {
+        grid-template-columns: 1fr;
+        padding: 16px;
+    }
+
+    .modal-content {
+        width: 90%;
+        margin: 25% auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .header .logo {
+        font-size: 20px;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .menu ul li {
+        width: 100%;
+    }
+
+    .menu ul li a {
+        justify-content: center;
+    }
+
+    .habitacion .datos {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+}
+
+
+
+table{
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+table th, td{
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+    font-size: 16px;
+}
+
+table th {
+    background-color: var(--color-principal);
+    color: white;
+    text-align: center;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+table th:hover {
+    background-color: #1a5a7a;
+}
+
+button{
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: 2px solid var(--color-principal);
+    color: var(--color-principal);
+    font-weight: bold;
+    margin-right: 10px;
+    &:hover{
+        background-color: var(--color-principal);
+        color: #fff;
+    }
+}
+
+table a{
+    text-decoration: none;
+    color: var(--color-principal);
+    background-color: #f2f2f2;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: 2px solid var(--color-principal);
+    &:hover{
+        background-color: var(--color-principal);
+        color: #fff;
+    }
+}
+
+table tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+table tr:nth-child(odd){
+    background-color: #ffffff;
+}
+
+.agregar-usuario{
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+    width: 140px;
+    text-decoration: none;
+    color: var(--color-principal);
+    background-color: #f2f2f2;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: 2px solid var(--color-principal);
+    &:hover{
+        background-color: var(--color-principal);
+        color: #fff;
+    }
+}
+
+.modal-content form{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  margin-top:10px;
+}
+
+.modal-content label{
+  font-weight:600;
+  color:var(--color-principal);
+  display:block;
+}
+
+.modal-content input[type="text"],
+.modal-content input[type="number"],
+.modal-content input[type="password"],
+.modal-content input[type="email"],
+.modal-content input[type="date"],
+.modal-content input[type="time"],
+.modal-content select,
+.modal-content textarea{
+  width:100%;
+  padding:5px 14px;
+  border:1px solid #ccc;
+  border-radius:8px;
+  font-size:15px;
+}
+.modal-content input[type="button"],
+.modal-content input[type="submit"],
+.modal-content input[type="reset"],
+.modal-content button{
+  width:auto;
+  padding:10px 10px;
+  border-radius:10px;
+  cursor:pointer;
+  background:var(--color-principal);
+  color:#fff;
+  border:none;
+  transition:background 0.25s ease;
+  font-weight:bold;
+}
+
+.modal-content input:focus,
+.modal-content select:focus,
+.modal-content textarea:focus{
+  outline:2px solid var(--color-principal);
+  border-color:var(--color-principal);
+}
+
+.modal-content .btn-primary,
+.modal-content a.btn-primary{
+  background:var(--color-principal);
+  color:#fff;
+  border:none;
+  padding:5px 14px;
+  font-weight:bold;
+  border-radius:10px;
+  cursor:pointer;
+  transition:background 0.25s ease;
+}
+
+.modal-content .btn-primary:hover{
+  background:#045b8e;
+}
+
+.modal-content .btn-secondary,
+.modal-content a.btn-secondary{
+  background:#f2f2f2;
+  color:var(--color-principal);
+  border:2px solid var(--color-principal);
+  padding:5px 14px;
+  font-weight:bold;
+  border-radius:10px;
+  cursor:pointer;
+  transition:background 0.25s ease;
+}
+
+.modal-content .btn-secondary:hover{
+  background:var(--color-principal);
+  color:#fff;
+}
+
+.modal-content .form-row{
+  display:flex;
+  flex-wrap:wrap;
+}
+
+
+
+@media (max-width:600px){
+  .modal-content .form-row{
+    flex-direction:column;
+  }
+}
+
